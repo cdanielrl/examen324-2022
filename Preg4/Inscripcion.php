@@ -16,7 +16,7 @@ function listarInscripciones() {
 function listarInscripcionesporDepartamento() {
     $db=new Db();
     $mdb=$db->conectar();
-    $sql = 'SELECT departamento,ci_estudiante, sigla, nota1, nota2, nota3, nota_final FROM inscripcion,persona WHERE inscripcion.ci_estudiante=persona.ci ORDER BY departamento';
+    $sql = 'SELECT departamento.departamento,ci_estudiante, sigla, nota1, nota2, nota3, nota_final FROM departamento LEFT JOIN persona on departamento.codigo=persona.departamento LEFT JOIN inscripcion on persona.ci=inscripcion.ci_estudiante ORDER BY codigo';
     $consulta = $mdb->prepare($sql);
     $consulta->execute();
     $resultado = $consulta->fetchAll(PDO::FETCH_GROUP);
