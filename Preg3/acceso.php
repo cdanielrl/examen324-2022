@@ -17,6 +17,11 @@ if (! empty($_SESSION["userId"])) {
     <a href="usuarios.php">
         <button class="button">Ver tabla usuarios</button>
     </a>
+    <a href="logout.php">
+        <button class="button">
+            Salir
+        </button>
+    </a>
     <?php
 } else {
     require_once './login-form.php';

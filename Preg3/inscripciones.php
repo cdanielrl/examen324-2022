@@ -52,6 +52,11 @@ if (! empty($_SESSION["userId"])) {
             Volver
         </button>
     </a>
+    <a href="logout.php">
+        <button class="button">
+            Salir
+        </button>
+    </a>
     <?php
 } else {
     require_once './login-form.php';
