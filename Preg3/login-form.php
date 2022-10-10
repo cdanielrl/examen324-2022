@@ -35,7 +35,7 @@
           </div>
           <div class="field-column">
           <div>
-          <input type="submit" name="login" value="Login" class="button"></span>
+          <input type="submit" name="login" value="Login" class="button">
           </div>
     </div>
     </form>
